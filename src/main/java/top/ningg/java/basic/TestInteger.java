@@ -41,6 +41,7 @@ public class TestInteger {
             System.out.println("Integer valueOf，两个对象相等");
         }
 
-
+        int max = Integer.MAX_VALUE;
+        System.out.println(max);
     }
 }

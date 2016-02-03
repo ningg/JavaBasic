@@ -9,28 +9,25 @@ import java.util.List;
  */
 public class TestEnum {
     public enum Light {
-        RED(1),YELLOW,BLUE;
-
-
-
-        Light(int i) {
-            this.i = i;
-        }
+        RED(1),YELLOW(0),BLUE(7);
 
         private int i;
 
         Light() {
+        }
 
+        Light(int i) {
+            this.i = i;
         }
     }
 
     public static void main(String args[]) {
-        List<Integer> inputList = Lists.newArrayList(1);
-        System.out.println(inputList.get(0));
 
         for(Light light:Light.values()) {
-            System.out.println(light.i);
+            System.out.println(String.format("(name:%s, i:%s, ordinal:%s)", light.name(), light.i, light.ordinal()));
         }
+
+        System.out.println("-----next-----");
         System.out.println(Light.valueOf("RED"));
     }
 }
