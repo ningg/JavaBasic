@@ -1,6 +1,7 @@
 package top.ningg.java.basic;
 
 import com.google.common.collect.Lists;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
@@ -29,5 +30,6 @@ public class TestEnum {
 
         System.out.println("-----next-----");
         System.out.println(Light.valueOf("RED"));
+        System.out.println(StringUtils.lowerCase(Light.BLUE.toString()));
     }
 }

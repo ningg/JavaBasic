@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+    http://dozer.sourceforge.net/schema/beanmapping.xsd">
+       <mapping>
+              <!--<class-a>test.Book</class-a>-->
+              <!--<class-b>test.BookVo</class-b>-->
+              <!--<field>-->
+                     <!--<a>name</a>-->
+                     <!--<b>namevo</b>-->
+              <!--</field>-->
+              <!--<field>-->
+                     <!--<a>author</a>-->
+                     <!--<b>authorvo</b>-->
+              <!--</field>-->
+       </mapping>
+</mappings>

@@ -6,6 +6,7 @@ package top.ningg.java.basic;
 public class TestInteger {
 
     public static void main(String[] args) {
+
         Integer integerA = new Integer(1);
         Integer integerB = new Integer(1);
 

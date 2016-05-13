@@ -18,5 +18,13 @@ public class TestLong {
         System.out.println(0 >= value);
 
 
+        String input = "1232123";
+        Object obj = input;
+        Number num = (Number) obj;
+        long longNum = num.longValue();
+
+        System.out.println(longNum);
+
+
     }
 }
