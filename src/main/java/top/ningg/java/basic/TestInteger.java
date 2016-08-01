@@ -1,5 +1,7 @@
 package top.ningg.java.basic;
 
+import com.google.common.primitives.Ints;
+
 /**
  * Created by guoning on 15/10/29.
  */
@@ -44,5 +46,12 @@ public class TestInteger {
 
         int max = Integer.MAX_VALUE;
         System.out.println(max);
+
+        long long_value_exceed_int_max_value = Integer.MAX_VALUE + 1000L;
+
+        int int_value = (int) long_value_exceed_int_max_value;
+        int int_value_with_guava = Ints.checkedCast(long_value_exceed_int_max_value);
+        System.out.println(int_value);
+        System.out.println(int_value_with_guava);
     }
 }

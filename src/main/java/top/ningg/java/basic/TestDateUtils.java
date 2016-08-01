@@ -1,10 +1,12 @@
 package top.ningg.java.basic;
 
-import org.apache.commons.lang3.time.DateFormatUtils;
-import org.apache.commons.lang3.time.DateUtils;
-
 import java.text.DateFormat;
 import java.util.Date;
+
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.LocalDate;
 
 /**
  * Created by guoning on 15/11/6.
@@ -37,5 +39,13 @@ public class TestDateUtils {
 
         output = DateFormat.getTimeInstance(DateFormat.SHORT).format(new Date());
         System.out.println(output);
+
+        Date today = new Date();
+        Date oneMonthBefore = new DateTime(today.getTime()).minusMonths(1).toDate();
+
+        int days = Days.daysBetween(LocalDate.fromDateFields(oneMonthBefore), LocalDate.fromDateFields(today)).getDays();
+        days = Days.daysBetween(LocalDate.fromDateFields(today), LocalDate.fromDateFields(oneMonthBefore)).getDays();
+
+        System.out.println(days);
     }
 }
