@@ -11,9 +11,57 @@
     <properties>
         <guava.version>18.0</guava.version>
         <httpcomponents.version>4.4.1</httpcomponents.version>
+        <apache.poi.version>3.13</apache.poi.version>
+        <spring.version>4.1.9.RELEASE</spring.version>
     </properties>
 
     <dependencies>
+
+        <!--Spring 配置-->
+        <!-- spring jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- spring mvc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- WEB end -->
 
         <dependency>
             <groupId>com.meituan.show.service</groupId>
@@ -110,6 +158,31 @@
             <artifactId>commons-codec</artifactId>
             <version>1.7</version>
         </dependency>
+        <!--apache poi: word\excel 文件读写-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${apache.poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${apache.poi.version}</version>
+        </dependency>
+
+        <!--中国阴历转换-->
+        <dependency>
+            <groupId>com.ibm.icu</groupId>
+            <artifactId>icu4j</artifactId>
+            <version>58.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dianping.squirrel</groupId>
+            <artifactId>squirrel-client</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
 
     </dependencies>
 

@@ -8,5 +8,6 @@ public class TestBoolean {
     public static void main(String[] args) {
         boolean success = true;
         System.out.println(String.format("success : %s", success));
+
     }
 }

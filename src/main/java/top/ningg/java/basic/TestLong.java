@@ -25,6 +25,8 @@ public class TestLong {
 
         System.out.println(longNum);
 
+        long valueLong = 1000L;
 
+        System.out.println();
     }
 }

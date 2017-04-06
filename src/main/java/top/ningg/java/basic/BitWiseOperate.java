@@ -1,5 +1,6 @@
 package top.ningg.java.basic;
 
+
 /**
  * Created by guoning on 15/9/1.
  */

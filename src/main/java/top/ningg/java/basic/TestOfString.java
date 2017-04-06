@@ -8,6 +8,9 @@ public class TestOfString {
         String input = "《密室3之不可逃脱》";
         String result = extractProductName(input);
         System.out.println(result);
+
+        System.out.println(String.format("%s%s%%的%s", "100","4999", "230"));
+        System.out.println(String.format("shdfhasdf : %s", null));
     }
 
     // 去掉产品名称前后的书名号

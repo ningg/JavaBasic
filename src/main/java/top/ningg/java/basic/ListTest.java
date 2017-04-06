@@ -1,12 +1,13 @@
 package top.ningg.java.basic;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
+import java.util.List;
+import java.util.Set;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
-import java.util.List;
-import java.util.Set;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 
 /**
  * Created by guoning on 15/8/27.
@@ -39,6 +40,10 @@ public class ListTest {
                 System.out.println("null");
             }
         }
+
+        List<NameValuePair> testList = null;
+        List<Integer> hahaTest = (List<Integer>) (List<?>) testList;
+        System.out.println(hahaTest);
 
     }
 }

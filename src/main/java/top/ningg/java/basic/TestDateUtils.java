@@ -8,6 +8,8 @@ import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.joda.time.LocalDate;
 
+import com.ibm.icu.util.ChineseCalendar;
+
 /**
  * Created by guoning on 15/11/6.
  */
@@ -47,5 +49,11 @@ public class TestDateUtils {
         days = Days.daysBetween(LocalDate.fromDateFields(today), LocalDate.fromDateFields(oneMonthBefore)).getDays();
 
         System.out.println(days);
+
+        // 中文日历转换
+        Date date = new Date();
+
+        System.out.println(date);
+
     }
 }
