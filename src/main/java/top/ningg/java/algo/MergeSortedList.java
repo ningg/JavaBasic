@@ -1,7 +1,5 @@
 package top.ningg.java.algo;
 
-import org.omg.IOP.TAG_RMI_CUSTOM_MAX_STREAM_FORMAT;
-
 import java.util.Random;
 
 /**
@@ -17,15 +15,29 @@ public class MergeSortedList {
 
     public static void main(String[] args) {
         // 1. 构造列表
-        Node node1 = constructNodeList(1);
-        Node node2 = constructNodeList(1);
+        Node node1 = constructSortedNodeList(5);
+        Node node2 = constructSortedNodeList(5);
+
+        printList(node1);
+        printList(node2);
 
         // 2. 排序
         // Node result = mergeSortedList(node1, node2);
         Node result = mergeSortedListWithLoop(node1, node2);
         // 3. 输出
-        for (Node currNode = result; currNode != null; currNode = currNode.next) {
-            System.out.println(currNode.value);
+        printList(result);
+    }
+
+    // 输出链表
+    public static void printList(Node head) {
+        // 边界判断
+        if (null == head) {
+            return;
+        }
+        // 输出
+        System.out.println();
+        for (Node currNode = head; currNode != null; currNode = currNode.next) {
+            System.out.print(String.format("%d-", currNode.value));
         }
     }
 
@@ -36,6 +48,31 @@ public class MergeSortedList {
         Random random = new Random();
         for (int index = 0; index < num; index++) {
             int value = random.nextInt(100);
+            Node newNode = new Node(value);
+            if (node == null) {
+                node = newNode;
+                currNode = node;
+            } else {
+                currNode.next = newNode;
+                currNode = currNode.next;
+            }
+        }
+        return node;
+    }
+
+    // 构造链表(升序的有序链表)
+    private static Node constructSortedNodeList(int num) {
+        Node node = null;
+        Node currNode = null;
+        Random random = new Random();
+        for (int index = 0; index < num; index++) {
+            int value = random.nextInt(100);
+            // 构造升序链表
+            if (null != currNode){
+                while (value < currNode.value){
+                    value = random.nextInt(100);
+                }
+            }
             Node newNode = new Node(value);
             if (node == null) {
                 node = newNode;
@@ -111,6 +148,8 @@ public class MergeSortedList {
                 currNode.next = secondHead;
                 secondHead = secondHead.next;
             }
+            // 调整指针
+            currNode = currNode.next;
         }
 
         // 3. 链表多余节点，向后追加
