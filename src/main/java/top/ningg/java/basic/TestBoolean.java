@@ -9,5 +9,10 @@ public class TestBoolean {
         boolean success = true;
         System.out.println(String.format("success : %s", success));
 
+        Boolean nullValue = null;
+        if (nullValue){
+            System.out.println();
+        }
+
     }
 }

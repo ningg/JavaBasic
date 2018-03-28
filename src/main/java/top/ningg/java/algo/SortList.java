@@ -3,7 +3,7 @@ package top.ningg.java.algo;
 import java.util.Random;
 
 /**
- * 题目：单链表，排序
+ * 题目：单链表，排序(升序)
  *
  * 分析：
  * 1. 方案A：选择排序，时间复杂度 O(n^2)

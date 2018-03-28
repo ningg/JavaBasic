@@ -113,7 +113,7 @@ public class MergeSortedList {
             }
         }
 
-        // 3. 链表多余字段，向后追加
+        // 3. 链表多余节点，向后追加
         if (null != firstHead){
             currNode.next = firstHead;
         } else {

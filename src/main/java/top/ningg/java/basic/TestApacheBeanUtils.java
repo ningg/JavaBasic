@@ -7,7 +7,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import top.ningg.java.model.Project;
 import top.ningg.java.model.enums.ProjectTicketStatusEnum;
 
-import com.meituan.show.thrift.basicdata.model.TProject;
 
 /**
  * Created by guoning on 16/3/25.
@@ -23,10 +22,10 @@ public class TestApacheBeanUtils {
         project.setModified(new Date());
         project.setAudited(false);
 
-        TProject tProject = new TProject();
-        BeanUtils.copyProperties(tProject, project);
-
-        System.out.println(tProject);
+//        TProject tProject = new TProject();
+//        BeanUtils.copyProperties(tProject, project);
+//
+//        System.out.println(tProject);
 
     }
 }

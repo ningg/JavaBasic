@@ -1,6 +1,6 @@
 package top.ningg.java.model.enums;
 
-public enum TPartnerSourceEnum implements org.apache.thrift.TEnum {
+public enum TPartnerSourceEnum {
     YONGLE(0),
     SELF(1),
     MAHUA(2),
@@ -24,6 +24,7 @@ public enum TPartnerSourceEnum implements org.apache.thrift.TEnum {
 
     /**
      * Find a the enum type by its integer value, as defined in the Thrift IDL.
+     *
      * @return null if the value is not found.
      */
     public static TPartnerSourceEnum findByValue(int value) {
