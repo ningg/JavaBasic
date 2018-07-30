@@ -1,5 +1,6 @@
 package top.ningg.java.basic;
 
+import java.util.Calendar;
 import org.apache.commons.lang3.time.DateUtils;
 
 import java.text.ParseException;
@@ -24,6 +25,12 @@ public class TestOfDateParse {
         for (String single : dateStringList){
             System.out.println(extractDate(single));
         }
+
+        Date currentTime = new Date();
+        // 过滤掉「时分秒」
+        currentTime = DateUtils.truncate(currentTime, Calendar.DATE);
+
+        System.out.println(currentTime);
     }
 
     // 根据日期字符, 转换为目标日期
