@@ -187,6 +187,14 @@
         </dependency>
         <!--Kafka Producer: END-->
 
+        <!--ZooKeeper Curator: START-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>apache-curator</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+        <!--ZooKeeper Curator: END-->
+
         <dependency>
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-core</artifactId>
@@ -197,7 +205,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.8.8</version>
         </dependency>
-
 
     </dependencies>
 

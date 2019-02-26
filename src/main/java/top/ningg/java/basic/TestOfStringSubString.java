@@ -15,7 +15,7 @@ public class TestOfStringSubString {
         String input3 = "";
         String input4 = "http://show.meituan.com/projects?uuid=51D884000E77441FFF5CF399A7EE68A22C025167D193DF595A6761512DF1A888&utm_term=6.5&utm_source=AppStore&utm_content=51D884000E77441FFF5CF399A7EE68A22C025167D193DF595A6761512DF1A888&version_name=6.5&sortid=0&userid=235642457&utm_medium=iphone&cid=5&lat=40.007305&utm_campaign=AgroupBgroupD200Ghomepage_category16_20159__a1__c20077&token=Ur17WSikTXO6TeP4eREG1jB58iwAAAAAMAEAAOmvV72sAzOVLVMI5tHCQet0opE8YUxul8O-Z2FkAA--s9YKHXGjA9ND8zn2epP5YQ&lng=116.488944&f=iphone&ci=1&msid=3F51E23D-1753-4741-9A4A-02EFAB0D3BED2016-02-16-11-5561";
 
-        String mobile= "12310002000";
+        String mobile = "12310002000";
         System.out.println(mobile.length());
 
         oriSubStr(splitter, input1);
@@ -34,7 +34,7 @@ public class TestOfStringSubString {
         utilReplaceString(input4, searchStr, replaceStr);
     }
 
-    private static void utilSubString(String splitter, String input){
+    private static void utilSubString(String splitter, String input) {
         input = StringUtils.substringBefore(input, splitter);
         System.out.println(input);
     }

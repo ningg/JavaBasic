@@ -1,10 +1,9 @@
 package top.ningg.java.basic;
 
-import java.util.List;
-
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
+import java.util.List;
 
 /**
  * Created by guoning on 16/4/28.
@@ -33,7 +32,7 @@ public class TestOfList {
         int offset = 0;
         int limit = 2;
         for (int index = offset; index < numbers.size(); index += limit) {
-            System.out.println(numbers.subList(index, (index + limit < numbers.size()) ? (index + limit) : numbers.size()));
+            System.out.println(numbers.subList(index, Math.min(index + limit, numbers.size())));
         }
 
     }
