@@ -12,7 +12,7 @@
         <guava.version>18.0</guava.version>
         <httpcomponents.version>4.4.1</httpcomponents.version>
         <apache.poi.version>3.13</apache.poi.version>
-        <spring.version>4.1.9.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
     </properties>
 
     <dependencies>
